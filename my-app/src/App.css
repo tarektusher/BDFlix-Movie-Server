@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.tp{
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url('./assets/primary.jpg');
+}
+.tpp{
+  opacity: 0.5;
+  background-color: blueviolet;
+}
+.size{
+  font-size: 48px !important;
+}
