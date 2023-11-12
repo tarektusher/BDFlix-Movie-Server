@@ -46,3 +46,12 @@
 .size{
   font-size: 48px !important;
 }
+.game{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.game input {
+  width: 50%;
+}
