@@ -20,7 +20,7 @@ function MoviesList() {
     const baseApi = process.env.REACT_APP_API_URL;
     const keyApi = process.env.REACT_APP_API_KEY;
     const API = `${baseApi}popular?api_key=${keyApi}`
-
+    const preSearchApi = process.env.REACT_APP_SEARCH_API;
     const [movies, setMovies] = useState([]);
     const [queryTerm, setQueryTerm] = React.useState('');
 
@@ -37,11 +37,8 @@ function MoviesList() {
 
 
     const searchGames = async(name) =>{
-      console.log(name);
-      const preSearchApi = "https://api.themoviedb.org/3/search/movie?query="
-      const rev = `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${keyApi}`
-      const searchApi = `${preSearchApi}${name}&api_key=${keyApi}`
-      console.log(rev)
+      console.log(preSearchApi)
+      const searchApi = `${preSearchApi}query=${name}&api_key=${keyApi}`
       const response = await fetch(searchApi);
       const movieList = await response.json();
       setMovies(movieList.results);
