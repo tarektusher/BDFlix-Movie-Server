@@ -15,6 +15,7 @@ module.exports = {
         "form_color" :"#292926",
         "footer" :"#B3ADA8",
         "gray" :"#757575",
+        "newcl" : "#2E3B55"
       },
     },
   },
