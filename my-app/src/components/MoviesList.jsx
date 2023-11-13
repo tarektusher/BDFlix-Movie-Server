@@ -41,7 +41,7 @@ function MoviesList() {
       const searchApi = `${preSearchApi}query=${name}&api_key=${keyApi}`
       const response = await fetch(searchApi);
       const movieList = await response.json();
-      setMovies(movieList.results);
+      setMovies(movieList?.results);
     }
     React.useEffect(()=>{
       searchGames(queryTerm);

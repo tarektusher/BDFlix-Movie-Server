@@ -40,7 +40,7 @@ function About() {
                     <option value="hindi">Hindi</option>
                </select>
           </div>
-          <h3>BDflix Bangladesh</h3>
+          <h3>copyright : BDflix Bangladesh</h3>
      </div>
   )
 }
