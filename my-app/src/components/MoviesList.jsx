@@ -1,5 +1,5 @@
 
-import { Box, Button, Input, Stack, TextField, Typography } from '@mui/material'
+import { Box,  Typography } from '@mui/material'
 import React, { useState, useEffect} from 'react'
 import MovieCard from './MovieCard';
 import Paper from '@mui/material/Paper';
