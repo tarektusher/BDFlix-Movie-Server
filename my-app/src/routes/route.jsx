@@ -7,6 +7,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import AddMovie from '../components/AddMovie';
 import DeleteMovie from '../components/DeleteMovie';
+import UpdateMovie from '../components/UpdateMovie';
 // const Navbar = lazy(()=> import('./components/Navbar'));
 // const  Home = lazy(()=>import('./components/Home')) ;
 // const MoviesList = lazy(()=> import ('./components/MoviesList')) ;
@@ -26,8 +27,9 @@ function route() {
         <hr className='my-1 border-gray-600 border-2'></hr>
         <DeleteMovie />
         <hr className='my-1 border-gray-600 border-2'></hr>
+        <UpdateMovie/>
+        <hr className='my-1 border-gray-600 border-2'></hr>
         <Contact />
-        
         <hr className='my-1 border-gray-600 border-2'></hr>
         <About />
     </div>
