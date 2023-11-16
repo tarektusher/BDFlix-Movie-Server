@@ -19,11 +19,13 @@ const getFormValue = (e)=>{
 
 }
 return (
-<Box>
-    <Typography variant='h4' >
+
+<Box style={{background : '#3C4043'}}>
+    <Grid sx={{paddingTop : '2vw'}}>
+    <Typography variant='h4' sx={{ width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '29.5vw', color : 'white'}}>
            Find A Movie in Your Movie List
-    </Typography>
-    <Grid>
+    </Typography></Grid>
+    <Grid sx={{paddingBottom : '2vw', marginTop : '2vh'}}>
     <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
       <CardContent> 
         <Typography variant="body2" color="textSecondary" component="p" gutterBottom>

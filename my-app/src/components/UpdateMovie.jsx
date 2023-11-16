@@ -60,7 +60,7 @@ const getFormValue = (e)=>{
 }
 return (
 <Box>
-    <Typography variant='h4' >
+    <Typography variant='h4' sx={{margin : '5vh', background : "#2E3B55", width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '30vw', color : 'white'}}>
           Update A Movie in Your Movie List
     </Typography>
     <Grid>

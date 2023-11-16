@@ -63,7 +63,7 @@ function Contact() {
 
   return (
     <Box>
-        <Typography gutterBottom variant="h3" align="center">
+        <Typography variant='h4' sx={{margin : '5vh', background : "#2E3B55", width :'20vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '40vw', color : 'white'}}>
         Contact Us
        </Typography>
       <Grid>
