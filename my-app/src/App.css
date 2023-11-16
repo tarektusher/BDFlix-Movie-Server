@@ -46,12 +46,12 @@
 .size{
   font-size: 48px !important;
 }
-.game{
+.movie{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.game input {
+.movie input {
   width: 50%;
 }

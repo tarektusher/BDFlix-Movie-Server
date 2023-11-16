@@ -33,6 +33,9 @@ const MovieCard = (movie) => {
               {movie.movie.title}
               </Typography>
               <Typography variant="body2" color="#9E9E9E">
+              Movie Id : {movie.movie.id}
+              </Typography>
+              <Typography variant="body2" color="#9E9E9E">
               Language : {movie.movie.original_language}
               </Typography>
               <Typography variant="body2" color="#9E9E9E">
