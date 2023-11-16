@@ -22,11 +22,12 @@ function route() {
         <hr className='my-1 border-gray-600 border-2'></hr>
         <MoviesList />
         <hr className='my-1 border-gray-600 border-2'></hr>
-        <Contact />
-        <hr className='my-1 border-gray-600 border-2'></hr>
         <AddMovie />
         <hr className='my-1 border-gray-600 border-2'></hr>
         <DeleteMovie />
+        <hr className='my-1 border-gray-600 border-2'></hr>
+        <Contact />
+        
         <hr className='my-1 border-gray-600 border-2'></hr>
         <About />
     </div>
