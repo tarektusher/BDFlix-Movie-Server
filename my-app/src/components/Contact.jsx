@@ -62,11 +62,12 @@ function Contact() {
     }
 
   return (
-    <Box>
-        <Typography variant='h4' sx={{margin : '5vh', background : "#2E3B55", width :'20vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '40vw', color : 'white'}}>
+    <Box sx={{background : '#2C3952'}}>
+      <Grid sx={{paddingTop : '2vw'}}>
+        <Typography variant='h4' sx={{background : "#2E3B55", width :'20vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '40vw', color : 'white'}}>
         Contact Us
-       </Typography>
-      <Grid>
+       </Typography></Grid>
+      <Grid sx={{paddingBottom : '2vw', marginTop : '2vh'}}>
         <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
           <CardContent> 
             <Typography variant="body2" color="textSecondary" component="p" gutterBottom>

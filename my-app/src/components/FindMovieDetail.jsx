@@ -20,7 +20,7 @@ const getFormValue = (e)=>{
 }
 return (
 
-<Box style={{background : '#2C3952'}}>
+<Box sx={{background : '#2C3952'}}>
     <Grid sx={{paddingTop : '2vw'}}>
     <Typography variant='h4' sx={{ width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '29.5vw', color : 'white'}}>
            Find A Movie in Your Movie List
