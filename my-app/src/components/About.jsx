@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-        <div className="mt-1 p-10 text-white bg-form_color w-full">
+        <div className="mt-1 p-10 text-white bg-form_color w-full" id='about'>
           <div>
                <a href="#" className="">Questions? Contact us.</a>
           </div>

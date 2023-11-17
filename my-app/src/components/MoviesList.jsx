@@ -48,7 +48,7 @@ function MoviesList() {
     },[])
   return (
     
-    <Box className="mt-10">
+    <Box className="mt-10" id="movie">
         <Typography variant='h3' color={"#2E3B55"}>
             List of Free Movies
         </Typography>

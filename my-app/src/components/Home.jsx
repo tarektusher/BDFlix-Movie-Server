@@ -2,8 +2,8 @@ import React from 'react'
 import ('../App.css');
 function Home() {
   return (
-    <div className="w-full h-screen  bg-no-repeat bg-cover tp" 
-          >
+    <div className="w-full h-screen  bg-no-repeat bg-cover tp " 
+          id = "home">
                <div classNameName="flex flex-col items-center gap-4 md:gap-7 ">
                     <div></div>
                     <div>

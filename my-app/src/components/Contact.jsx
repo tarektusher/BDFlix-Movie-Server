@@ -62,7 +62,7 @@ function Contact() {
     }
 
   return (
-    <Box sx={{background : '#2C3952'}}>
+    <Box sx={{background : '#2C3952'}} id = "contact">
       <Grid sx={{paddingTop : '2vw'}}>
         <Typography variant='h4' sx={{background : "#2E3B55", width :'20vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '40vw', color : 'white'}}>
         Contact Us
