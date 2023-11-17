@@ -12,7 +12,7 @@ module.exports = {
         "primary" : "#E50914",
         "secondary" : "red",
         "form_color_hover" :"#4E4E4E",
-        "form_color" :"#004d40",
+        "form_color" :"#424242",
         "footer" :"#B3ADA8",
         "gray" :"#757575",
         "newcl" : "#2E3B55"
