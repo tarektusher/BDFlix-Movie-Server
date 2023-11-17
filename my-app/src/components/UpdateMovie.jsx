@@ -59,11 +59,12 @@ const getFormValue = (e)=>{
 
 }
 return (
-<Box>
-    <Typography variant='h4' sx={{margin : '5vh', background : "#2E3B55", width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '30vw', color : 'white'}}>
+<Box style={{background : '#2C3952' }}>
+  <Grid sx={{paddingTop : '2vw'}}>
+    <Typography variant='h4' sx={{background : "#2E3B55", width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '30vw', color : 'white'}}>
           Update A Movie in Your Movie List
-    </Typography>
-    <Grid>
+    </Typography></Grid>
+    <Grid sx={{paddingBottom : '2vw', marginTop : '2vh'}}>
     <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
       <CardContent> 
         <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
