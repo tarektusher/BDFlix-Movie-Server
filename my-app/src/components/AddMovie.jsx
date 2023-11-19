@@ -55,11 +55,8 @@ function AddMovie() {
             vote_average : e.target.value
         })
     }
-
     const {setMovies} = useContext(MovieContext);
-    // console.log(state);
     const getFormValue = (e)=>{
-       
         e.preventDefault();
         console.log(movieInfo);
         setMovies((old)=>[...old, movieInfo]);

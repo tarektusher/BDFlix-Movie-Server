@@ -1,10 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import MovieCard from "./MovieCard";
 import ShowMovies from "./ShowMovies";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import "../App.css";
+import MovieContext from "../context/MovieContext";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -15,24 +16,25 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function MoviesList() {
-  const baseApi = process.env.REACT_APP_API_URL;
-  const keyApi = process.env.REACT_APP_API_KEY;
-  const API = `${baseApi}now_playing?api_key=${keyApi}`;
+  // const baseApi = process.env.REACT_APP_API_URL;
+   const keyApi = process.env.REACT_APP_API_KEY;
+  // const API = `${baseApi}now_playing?api_key=${keyApi}`;
   const preSearchApi = process.env.REACT_APP_SEARCH_API;
-  const [movies, setMovies] = useState([]);
+  //const [movies, setMovies] = useState([]);
   const [queryTerm, setQueryTerm] = useState("");
   const [sortMovie, setSortMovie] = useState("");
 
-  const findGames = async () => {
-    const response = await fetch(`${API}`);
-    const movieList = await response.json();
-    setMovies(movieList?.results);
-    console.log(movies);
-  };
-  useEffect(() => {
-    findGames();
-  }, []);
-
+  // const findGames = async () => {
+  //   const response = await fetch(`${API}`);
+  //   const movieList = await response.json();
+  //   setMovies(movieList?.results);
+  //   console.log(movies);
+  // };
+  // useEffect(() => {
+  //   findGames();
+  // }, []);
+  const { movies, setMovies }= useContext(MovieContext);
+  console.log(movies);
   const searchGames = async (name) => {
     console.log(preSearchApi);
     const searchApi = `${preSearchApi}query=${name}&api_key=${keyApi}`;
