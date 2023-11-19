@@ -83,13 +83,13 @@ function AddMovie() {
                   <TextField placeholder="Enter Movie ID" label="Movie ID" variant="outlined" fullWidth onChange={(e) => handleidChange(e)} required />
                 </Grid>
                 <Grid xs={12} sm={12} item>
-                  <TextField placeholder="Enter original_language name" label="original_language Name" variant="outlined" fullWidth onChange={(e) => handleoriginal_languageChange(e)} required />
+                  <TextField placeholder="Enter language name" label="Language Name" variant="outlined" fullWidth onChange={(e) => handleoriginal_languageChange(e)} required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type='string' placeholder="dd/mm/yy" label="Relese Date" variant="outlined" fullWidth onChange={(e) => handlerelease_date(e)} required />
+                  <TextField type='string' placeholder="dd-mm-yy" label="Relese Date" variant="outlined" fullWidth onChange={(e) => handlerelease_date(e)} required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="string" placeholder="Enter vote_average" label="vote_average" variant="outlined" fullWidth onChange={(e) => handlevote_averageChange(e)} required />
+                  <TextField type="string" placeholder="Enter IMDB Rating" label="IMDB Rating" variant="outlined" fullWidth onChange={(e) => handlevote_averageChange(e)} required />
                 </Grid>
                 
                 <Grid item xs={12}>
