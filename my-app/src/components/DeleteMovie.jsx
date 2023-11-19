@@ -1,22 +1,30 @@
 import { Box, Button, Card, CardContent, Grid, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import MovieContext from '../context/MovieContext'
 
 function DeleteMovie() {
-  const [movieInfo , setMovieInfo] = useState({
-    movieid : "",
-    
-})
+
+  const [movieInfo , setMovieInfo] = useState(null)
 
 const handleMovieIdChange = (e)=>{
-    setMovieInfo({
-        movieid : e.target.value,
-    })
+    setMovieInfo(e.target.value);
 }
+const {movies, setMovies} = useContext(MovieContext);
+
 
 const getFormValue = (e)=>{
-    alert(`::: Movie is added to your movielist :::`);
-    console.log(e);
-
+  e.preventDefault();
+    console.log(movies);
+    setMovies(movies.filter(movie => movie.id !== movieInfo))
+    
+    console.log(movieInfo.movieid);
+    // setFlag(flag.filter((movie) => (movie.id !== movieInfo.movieid)))
+    // (flag == 1 ? 
+      alert(`::: Movie is deleted Successfully :::`)
+    // :
+      alert(`::: Please enter the correct Movie ID :::`)
+    // )
+    console.log(movies);
 }
 return (
 <Box style={{background : '#2C3952' }}>

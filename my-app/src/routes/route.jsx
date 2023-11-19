@@ -1,17 +1,13 @@
 import { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import MoviesList from '../components/MoviesList';
-import Navbar from '../components/Navbar';
-import Home from '../components/Home';
-import About from '../components/About';
-import Contact from '../components/Contact';
-import AddMovie from '../components/AddMovie';
-import DeleteMovie from '../components/DeleteMovie';
-import UpdateMovie from '../components/UpdateMovie';
-import FindMovieDetail from '../components/FindMovieDetail';
-// const Navbar = lazy(()=> import('./components/Navbar'));
-// const  Home = lazy(()=>import('./components/Home')) ;
-// const MoviesList = lazy(()=> import ('./components/MoviesList')) ;
+const About  = lazy(()=> import('../components/About'));
+const Contact = lazy(()=> import('../components/Contact'));
+const AddMovie = lazy(()=> import('../components/AddMovie'));
+const DeleteMovie = lazy(()=> import('../components/DeleteMovie'));
+const UpdateMovie = lazy(()=> import('../components/UpdateMovie'));
+const FindMovieDetail = lazy(()=> import('../components/FindMovieDetail'));
+const Navbar = lazy(()=> import('../components/Navbar'));
+const  Home = lazy(()=>import('../components/Home')) ;
+const MoviesList = lazy(()=> import ('../components/MoviesList')) ;
 // eslint-disable-next-line
  
 function route() {

@@ -18,7 +18,7 @@ const MovieContextProvider = (props) =>{
         findGames();
     }, []);
 
-    console.log(movies)
+    // console.log(movies)
     return (
         <MovieContext.Provider value = {{movies, setMovies}}>
             {props.children}
