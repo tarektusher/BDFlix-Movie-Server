@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
+import ShowMovies from "./ShowMovies";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import "../App.css";
@@ -16,17 +17,18 @@ const Item = styled(Paper)(({ theme }) => ({
 function MoviesList() {
   const baseApi = process.env.REACT_APP_API_URL;
   const keyApi = process.env.REACT_APP_API_KEY;
-  const API = `${baseApi}popular?api_key=${keyApi}`;
+  const API = `${baseApi}now_playing?api_key=${keyApi}`;
   const preSearchApi = process.env.REACT_APP_SEARCH_API;
   const [movies, setMovies] = useState([]);
   const [queryTerm, setQueryTerm] = React.useState("");
+  const [sortMovie, setSortMovie] = useState("");
 
   const findGames = async () => {
     const response = await fetch(`${API}`);
     const movieList = await response.json();
     // console.log(movieList.results);
     setMovies(movieList?.results);
-    // console.log(movies);
+    console.log(movies);
   };
   useEffect(() => {
     findGames();
@@ -39,6 +41,7 @@ function MoviesList() {
     const movieList = await response.json();
     setMovies(movieList?.results);
   };
+
   function compare( a, b ) {
     console.log(a.title);
     if ( a.title< b.title){
@@ -49,14 +52,18 @@ function MoviesList() {
     }
     return 0;
   }
-  
+
   const sortFunction = () =>{
-    setMovies(movies?.sort(compare));
+    setSortMovie(movies?.sort(compare));
+    console.log(sortMovie);
+    <ShowMovies movies = {sortMovie} />
     
   }
   React.useEffect(() => {
     searchGames(queryTerm);
   }, []);
+
+ 
   return (
     <Box className="mt-10" id="movie">
       <Typography variant="h3" color={"#2E3B55"}>
@@ -111,12 +118,7 @@ function MoviesList() {
         Sort Movie Item
       </Button>
       {movies?.length > 0 ? (
-        <div className="movie">
-          {movies.map((movie, index) => {
-            return <MovieCard movie={movie} />;
-          })}{" "}
-          <br />
-        </div>
+        <ShowMovies movies = {movies} />
       ) : (
         <Typography variant="h3">Please Waiting Server is Running</Typography>
       )}
