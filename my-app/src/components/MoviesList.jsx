@@ -20,13 +20,12 @@ function MoviesList() {
   const API = `${baseApi}now_playing?api_key=${keyApi}`;
   const preSearchApi = process.env.REACT_APP_SEARCH_API;
   const [movies, setMovies] = useState([]);
-  const [queryTerm, setQueryTerm] = React.useState("");
+  const [queryTerm, setQueryTerm] = useState("");
   const [sortMovie, setSortMovie] = useState("");
 
   const findGames = async () => {
     const response = await fetch(`${API}`);
     const movieList = await response.json();
-    // console.log(movieList.results);
     setMovies(movieList?.results);
     console.log(movies);
   };

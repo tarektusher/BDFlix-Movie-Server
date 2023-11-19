@@ -1,10 +1,12 @@
 import Route from "./routes/route";
-
+import MovieContextProvider from "./context/MovieContextProvider";
 function App() {
   return (
-    <div className="App">
-       <Route />
-    </div>
+    <MovieContextProvider>
+      <div className="App">
+        <Route />
+      </div>
+    </MovieContextProvider>
   );
 }
 

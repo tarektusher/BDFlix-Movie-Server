@@ -1,63 +1,69 @@
 import { Box, Button, Card, CardContent, Grid, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import MovieContext from '../context/MovieContext'
 
 function AddMovie() {
     const [movieInfo , setMovieInfo] = useState({
-        moviename : "",
-        movieid : "",
-        language : "",
-        releasedate : "",
-        rating: "",
+        title : "",
+        id : "",
+        original_language : "",
+        release_date : "",
+        vote_average: "",
     })
-    const handleMovieNameChange = (e)=>{
+    const handletitleChange = (e)=>{
         setMovieInfo({
-            moviename : e.target.value,
-            movieid : movieInfo.movieid,
-            language : movieInfo.language,
-            releasedate : movieInfo.releasedate,
-            rating : movieInfo.rating
+            title : e.target.value,
+            id : movieInfo.id,
+            original_language : movieInfo.original_language,
+            release_date : movieInfo.release_date,
+            vote_average : movieInfo.vote_average
         })
     }
-    const handleMovieIdChange = (e)=>{
+    const handleidChange = (e)=>{
         setMovieInfo({
-            moviename : movieInfo.moviename,
-            movieid : e.target.value,
-            language : movieInfo.language,
-            releasedate : movieInfo.releasedate,
-            rating : movieInfo.rating
+            title : movieInfo.title,
+            id : e.target.value,
+            original_language : movieInfo.original_language,
+            release_date : movieInfo.release_date,
+            vote_average : movieInfo.vote_average
         })
     }
-    const handleLanguageChange = (e)=>{
+    const handleoriginal_languageChange = (e)=>{
         setMovieInfo({
-            moviename : movieInfo.moviename,
-            movieid : movieInfo.movieid,
-            language : e.target.value,
-            releasedate : movieInfo.releasedate,
-            rating : movieInfo.rating
+            title : movieInfo.title,
+            id : movieInfo.id,
+            original_language : e.target.value,
+            release_date : movieInfo.release_date,
+            vote_average : movieInfo.vote_average
         })
     }
-    const handleReleaseDate = (e)=>{
+    const handlerelease_date = (e)=>{
         setMovieInfo({
-            moviename : movieInfo.moviename,
-            movieid : movieInfo.movieid,
-            language : movieInfo.language,
-            releasedate : e.target.value,
-            rating : movieInfo.rating
+           title : movieInfo.title,
+            id : movieInfo.id,
+            original_language : movieInfo.original_language,
+            release_date : e.target.value,
+            vote_average : movieInfo.vote_average
         })
     }
-    const handleRatingChange = (e)=>{
+    const handlevote_averageChange = (e)=>{
         setMovieInfo({
-            moviename : movieInfo.moviename,
-            movieid : movieInfo.movieid,
-            language : movieInfo.language,
-            releasedate : movieInfo.releasedate,
-            rating : e.target.value
+           title : movieInfo.title,
+            id : movieInfo.id,
+            original_language : movieInfo.original_language,
+            release_date : movieInfo.release_date,
+            vote_average : e.target.value
         })
     }
-    const getFormValue = (e)=>{
-        alert(`::: Movie is added to your movielist :::`);
-        console.log(e);
 
+    const {setMovies} = useContext(MovieContext);
+    // console.log(state);
+    const getFormValue = (e)=>{
+       
+        e.preventDefault();
+        console.log(movieInfo);
+        setMovies((old)=>[...old, movieInfo]);
+        alert(`::: Movie is added to your movielist :::`);
     }
   return (
     <Box sx={{background : '#2C3952' }}>
@@ -74,19 +80,19 @@ function AddMovie() {
             <form onSubmit={(e)=>getFormValue(e)}>
               <Grid container spacing={1}>
                 <Grid xs={12} sm={12} item>
-                  <TextField placeholder="Enter Movie name" label="Movie Name" variant="outlined" fullWidth onChange={(e) => handleMovieNameChange(e)} required />
+                  <TextField placeholder="Enter Movie name" label="Movie Name" variant="outlined" fullWidth onChange={(e) => handletitleChange(e)} required />
                 </Grid>
                 <Grid xs={12} sm={12} item>
-                  <TextField placeholder="Enter Movie ID" label="Movie ID" variant="outlined" fullWidth onChange={(e) => handleMovieIdChange(e)} required />
+                  <TextField placeholder="Enter Movie ID" label="Movie ID" variant="outlined" fullWidth onChange={(e) => handleidChange(e)} required />
                 </Grid>
                 <Grid xs={12} sm={12} item>
-                  <TextField placeholder="Enter language name" label="Language Name" variant="outlined" fullWidth onChange={(e) => handleLanguageChange(e)} required />
+                  <TextField placeholder="Enter original_language name" label="original_language Name" variant="outlined" fullWidth onChange={(e) => handleoriginal_languageChange(e)} required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type='string' placeholder="dd/mm/yy" label="Relese Date" variant="outlined" fullWidth onChange={(e) => handleReleaseDate(e)} required />
+                  <TextField type='string' placeholder="dd/mm/yy" label="Relese Date" variant="outlined" fullWidth onChange={(e) => handlerelease_date(e)} required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="string" placeholder="Enter Rating" label="Rating" variant="outlined" fullWidth onChange={(e) => handleRatingChange(e)} required />
+                  <TextField type="string" placeholder="Enter vote_average" label="vote_average" variant="outlined" fullWidth onChange={(e) => handlevote_averageChange(e)} required />
                 </Grid>
                 
                 <Grid item xs={12}>
