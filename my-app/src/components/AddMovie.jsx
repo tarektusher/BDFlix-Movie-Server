@@ -63,7 +63,7 @@ function AddMovie() {
         alert(`::: Movie is added to your movielist :::`);
     }
   return (
-    <Box sx={{background : '#2C3952' }}>
+    <Box sx={{background : '#2C3952' }} id = "addmovie">
       <Grid sx={{paddingTop : '2vw'}}>
         <Typography variant='h4' sx={{ width :'40vw', textAlign : 'center', borderRadius : '4px', padding : '4px', marginLeft : '30vw', color : 'white'}}>
                 Add A Movie in Your Movie List

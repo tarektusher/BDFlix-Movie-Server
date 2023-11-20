@@ -103,6 +103,28 @@ export default function Navbar() {
         <Button color="inherit">
           <Link
             activeClass="active"
+            to="addmovie"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+            onClick={closeMenu}
+          >
+            Action
+          </Link>
+        </Button>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        ></IconButton>
+        <Button color="inherit">
+          <Link
+            activeClass="active"
             to="about"
             spy={true}
             smooth={true}
@@ -191,6 +213,19 @@ export default function Navbar() {
                 onClick={closeMenu}
               >
                 Contact
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link
+                activeClass="active"
+                to="addmovie"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                onClick={closeMenu}
+              >
+                Action
               </Link>
             </Button>
             <Button color="inherit">

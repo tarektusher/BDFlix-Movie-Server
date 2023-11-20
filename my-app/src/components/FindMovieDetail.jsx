@@ -1,5 +1,6 @@
 import { Box, Button, Card, CardContent, Grid, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import MovieContext from '../context/MovieContext'
 
 function FindMovieDetail() {
   const [movieInfo , setMovieInfo] = useState({
@@ -12,8 +13,9 @@ const handleMovieIdChange = (e)=>{
         movieid : e.target.value,
     })
 }
-
+const { movies, setMovies } = useContext(MovieContext);
 const getFormValue = (e)=>{
+    e.preventDefault();
     alert(`::: Find a Movie :::`);
     console.log(e);
 
